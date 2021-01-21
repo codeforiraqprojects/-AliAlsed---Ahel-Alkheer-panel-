@@ -1,0 +1,22 @@
+
+  <mat-card style="margin:50px">
+
+    <table class="table table-striped">
+        <thead class="thead">
+          <tr>
+            <th scope="col"><h3>الاسم</h3></th>
+            <th scope="col"><h3>التعليق</h3></th>
+            <th scope="col"><h3> Action </h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of feedbackList | async json">
+            <td>{{item.firstname}}</td>
+            <td> {{item?.detail}}</td>
+            <td> <button mat-button color="accent" value="delete" (click)="del(item.key)"> delete </button> 
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>    
+</mat-card>

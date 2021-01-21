@@ -1,0 +1,22 @@
+<mat-card style="margin:50px">
+  <mat-card-content>
+    <div class="example-container" style="text-align: center">
+      <mat-form-field>
+        <input matInput [(ngModel)]="case.firstname"   placeholder="الاسم" style="text-align: right" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput   [(ngModel)]="case.address" placeholder="العنوان" style="text-align: right" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput   [(ngModel)]="case.phone" placeholder="رقم الهاتف" style="text-align: right" required>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput  [(ngModel)]="case.details" placeholder="تفاصيل الحاجه" style="text-align: right" required></textarea>
+      </mat-form-field>
+    </div>
+  <div style="text-align: center">
+    <button type="submit" [disabled]="!case.firstname || !case.address || !case.phone || !case.details" mat-button color="primary" style="align-self: flex-end" (click)="save()"> Update </button>
+  </div>
+  </mat-card-content>
+
+</mat-card>
